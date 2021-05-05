@@ -1,0 +1,167 @@
+@import url(https://fonts.googleapis.com/earlyaccess/opensanshebrew.css);
+@import url(https://fonts.googleapis.com/earlyaccess/opensanshebrewcondensed.css);
+
+body {
+  margin: 0;
+  font-family: 'Open Sans Hebrew';
+  direction: rtl;
+  background: #edf1f5;
+}
+
+.App {
+  width: 100%;
+}
+
+.Report {
+  margin: 2rem auto;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  background-color: #ffffff;
+  height: 391px;
+}
+
+.ImageOuter {
+  width: 100%;
+  height: 176px;
+  overflow: hidden;
+}
+
+.ImageInner {
+  width: 100%;
+  height: 100%;
+  background: url('./assets/images/landscape_207075.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform ease 200ms;
+}
+
+.ImageInner:hover {
+  transform: scale(1.1);
+}
+
+.ReportInfo {
+  padding: 0 1.5rem;
+}
+
+.Category {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.CategoryName {
+  margin: 0.5rem 0 0 0.5rem;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0 1rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  transition-duration: 200ms;
+}
+
+.BGRed {
+  background-color: red;
+}
+
+.BGBlue {
+  background-color: blue;
+}
+
+.BGYellow {
+  color: black;
+  background-color: yellow;
+}
+
+.BGGreen {
+  background-color: green;
+}
+
+.Title {
+  color: #25262b;
+  font-weight: bold;
+  margin: 0.5rem auto;
+}
+
+.Title > h3 {
+  margin: 0 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.SubTitle {
+  font-size: 14px;
+  color: #25262b;
+  margin: 0.25rem auto;
+}
+
+.SubTitle > p {
+  margin: 0 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.Author {
+  margin-top: 0.5rem;
+}
+
+.Author > span {
+  color: #777777;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.CategoryNameManager {
+  margin: 2rem auto;
+  background-color: #d1d5da;
+  border: 1px solid silver;
+}
+
+.BackGroundManager,
+.TextManager {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.BackGroundManager > select {
+  padding: 0.25rem;
+  outline: none;
+}
+
+.TextManager > input {
+  padding: 0.25rem 0.5rem;
+  transition-duration: 200ms;
+  outline: 1px solid transparent;
+}
+
+.TextManager > input:focus {
+  outline: 1px solid black;
+}
+
+@media (min-width: 314px) {
+  .Report,
+  .CategoryNameManager {
+    width: 314px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .App {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+  }
+  .CategoryNameManager {
+    width: 30%;
+  }
+}
